@@ -1,0 +1,7 @@
+@charset "UTF-8";
+
+* {box-sizing: border-box;}
+body { margin: 0; padding: 0; }
+#Login_main { max-width: 600px; margin: 20px auto; }
+#Login_main form input { width: 100%; height: 50px; padding: 5px 10px; }
+#Login_main > h1 { text-align: center; }
