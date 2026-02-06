@@ -2,5 +2,6 @@
     pageEncoding="UTF-8"%>
 <%
 session.invalidate();
-response.sendRedirect("09_01_session_main.jsp");
+// response.sendRedirect("09_01_session_main.jsp");
+response.sendRedirect("11_login.jsp");
 %>

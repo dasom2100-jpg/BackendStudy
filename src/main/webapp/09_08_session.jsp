@@ -12,10 +12,10 @@
 		SimpleDateFormat sdf = new SimpleDateFormat("YYYY-MM-dd HH:mm:ss");
 
 		long start_time = session.getCreationTime();
-		out.print("세션이 생성된 시간(long자료형의 값) : "+ start_time + "<br>");
-		
+		out.print("세션이 생성된 시간(long자료형의 값): "+start_time);
 		date = new Date(start_time);
-		out.println("세션이 생성된 시간  : " + sdf.format(date) + "<br>");
+		out.print("세션이 생성된 시간(영문표기형식의 날짜값): "+date);
+		out.println("세션이 생성된 시간(지정한 표기형식으로 나오는 날짜값)  : " + sdf.format(date) + "<br>");
 		
 		long last_time = session.getLastAccessedTime();
 		date = new Date(last_time);
