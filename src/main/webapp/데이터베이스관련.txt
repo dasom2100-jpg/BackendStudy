@@ -1,0 +1,20 @@
+create database jsp character set utf8;
+
+use jsp;
+-- 제약조건 기술순서 : not null -> default -> comment -> check
+create table users(
+uid varchar(20) primary key COMMENT '아이디' ,
+upw varchar(20) not null COMMENT '비밀번호' ,
+unm varchar(50) not null COMMENT '이름' ,
+utel  varchar(11) not null COMMENT '연락처' ,
+umail  varchar(50) not null COMMENT '이메일' ,
+ubirth  varchar(8) COMMENT '생년월일' ,
+ustart datetime default now() COMMENT '가입일자' ,
+uend datetime COMMENT '탈퇴일자' ,
+use_yn char(1) default 'y' COMMENT '사용여부: y-사용, n-탈퇴' check(use_yn in ('y', 'n')) ,
+urole varchar(10) default 'user'  COMMENT '역할: user-사용자, sub-중간관리자, super-최고관리자' check(urole in ('user', 'sub', 'super'))
+);
+
+
+insert into users(uid, upw, unm, utel, umail, urole)
+values ('admin', '1234', '관리자', '01011111111','admin@hi.com', 'super');
