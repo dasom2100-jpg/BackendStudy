@@ -12,6 +12,8 @@ String password = "1111";
 <html>
 <head>
 <title>Form Processing</title>
+<% System.out.println(pageContext.getRequest().getServletContext().getContextPath()); %>
+<link rel="stylesheet" href="${pageContext.request.servletContext.contextPath}/css/login.css">
 </head>
 <body>
 <jsp:useBean id="usersVO" class="com.dto.UsersVO" />

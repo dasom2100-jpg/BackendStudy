@@ -6,6 +6,8 @@
 <head>
 <meta charset="UTF-8">
 <title>Insert title here</title>
+<% System.out.println(pageContext.getRequest().getServletContext().getContextPath()); %>
+<link rel="stylesheet" href="${pageContext.request.servletContext.contextPath}/css/login.css">
 <style>
 table{ border-collapse : collapse;}
 table, td, th {border : 1px solid #555;}
@@ -23,11 +25,17 @@ if(loginID == null){
 }else{
 %>
 <div id="ADMIN_userList">
-	<h1>회원목록</h1>
-<form>
-	<input type="search" placeholder="이름이나 아이디를 입력하세요(일부가능)" name="keyword">
-	<input type="submit" value="검색">
-</form>
+
+<h1 style="text-align:center;">회원목록</h1>
+<div class="nav_wrap">
+	
+	
+	<form>
+		<input type="search" placeholder="이름이나 아이디를 입력하세요(일부가능)" name="keyword">
+		<input type="submit" value="검색">
+	</form>
+	</div>
+	<div class="nav_wrap">
  	<table>
 		<tr>
 			<th>아이디</th>
@@ -104,6 +112,11 @@ if(loginID == null){
 		%>
 		
 	</table>
+	</div>
+	
+	<div class="nav_wrap">
+		<a href="11_session_main.jsp" class="btn_link">홈으로</a>
+	</div>
 </div>
 <%} %>
 </body>

@@ -6,6 +6,8 @@
 <head>
 <meta charset="UTF-8">
 <title>Insert title here</title>
+<% System.out.println(pageContext.getRequest().getServletContext().getContextPath()); %>
+<link rel="stylesheet" href="${pageContext.request.servletContext.contextPath}/css/login.css">
 </head>
 <body>
 	<%
@@ -41,7 +43,12 @@
 		연락처 : <input type="tel" name="utel" value="<%=rs.getString("UTEL")%>"><br>
 		이메일 : <input type="email" name="umail" value="<%=rs.getString("UMAIL")%>"><br> 
 		생년월일 : <input type="text" name="ubirth" value="<%=rs.getString("UBIRTH")%>"><br>
+		
 	</div>
+	<div class="nav_wrap">
+		<a href="11_session_main.jsp" class="btn_link">홈으로</a>
+	</div>
+	
 
 
 	<%

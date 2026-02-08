@@ -8,6 +8,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="css/regex.css">
+    <% System.out.println(pageContext.getRequest().getServletContext().getContextPath()); %>
+	<link rel="stylesheet" href="${pageContext.request.servletContext.contextPath}/css/login.css">
     <script src="js/regex.js"></script>
 </head>
 
@@ -25,8 +27,8 @@
             <input type="email" name="umail" id="umail" class="inputCommonStyle errMsg" placeholder="이메일 입력">
             <input type="search" name="ubirth" id="ubirth" class="inputCommonStyle errMsg" placeholder="생년월일 입력(예: 20020723)">
 
-            <button type="submit" class="inputCommonStyle">회원 가입</button>
-            <button type="reset" class="inputCommonStyle">취소</button>
+            <button type="submit" class="btn_submit">회원 가입</button>
+            <button type="button" class="btn_submit"  onclick="location.href='11_session_main.jsp';"> 취소</button>
         </form>
     </div>
     <script>

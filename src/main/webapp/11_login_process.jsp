@@ -6,6 +6,8 @@
 <html>
 <head>
 <title>Implicit Objects</title>
+<% System.out.println(pageContext.getRequest().getServletContext().getContextPath()); %>
+<link rel="stylesheet" href="${pageContext.request.servletContext.contextPath}/css/login.css">
 </head>
 <body>
 	<%
@@ -36,9 +38,11 @@
 
 			}else{
 				//회원 정보가 없는 경우 처리
+				out.print("<div class='cont_box'>");
 				out.print("회원 정보가 일치하지 않습니다.<br>");
-				String moveStr = "<a href='11_login.jsp'>로그인으로 돌아가기</a>";
+				String moveStr = "<a href='11_login.jsp' class='btn_link'>로그인으로 돌아가기</a>";
 				out.print(moveStr);
+				out.print("</div>");
 			}
 			
 		}catch(Exception e){
